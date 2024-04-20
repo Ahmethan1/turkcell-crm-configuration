@@ -18,7 +18,7 @@ spring:
         routes[0]:
           id: customerService
           predicates[0]: Path=/customerService/api/v1/customers/**
-          uri: lb://CUSTOMER-SERVICE
+          uri: lb://CUSTOMERSERVICE
         routes[1]:
           id: discoveryServer
           predicates[0]: Path=/eureka/web
