@@ -32,4 +32,8 @@ spring:
           id: searchService
           predicates[0]: Path=/searchservice/api/v1/filters/**
           uri: lb://SEARCHSERVICE
+        routes[4]:
+          id: productService
+          predicates[0]: Path=/productservice/api/v1/products/**
+          uri: lb://PRODUCTSERVICE
 
