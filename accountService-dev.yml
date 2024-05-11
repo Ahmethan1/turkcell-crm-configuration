@@ -13,9 +13,9 @@ server:
 
 spring:
   application:
-    name: customerService
+    name: accountService
   datasource:
-    url: jdbc:postgresql://localhost:5432/CRMcustomerServiceDB
+    url: jdbc:postgresql://localhost:5432/CRMAccountServiceDB
     username: postgres
     password: 12345
   jpa:
@@ -29,8 +29,3 @@ spring:
           validation:
             mode: none
     show-sql: true
-  kafka:
-    producer:
-      bootstrap-servers: localhost:9092
-      key-serializer: org.apache.kafka.common.serialization.StringSerializer
-      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer

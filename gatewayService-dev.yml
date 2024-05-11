@@ -24,3 +24,14 @@ spring:
           predicates[0]: Path=/eureka/web
           filters[0]: SetPath=/
           uri: http://localhost:9000
+        routes[2]:
+          id: accountService
+          predicates[0]: Path=/accountservice/api/v1/accounts/**
+          filters[0]: SetPath=/
+          uri: lb://ACCOUNTSERVICE
+        routes[3]:
+          id: searchService
+          predicates[0]: Path=/searchservice/api/v1/filter/**
+          filters[0]: SetPath=/
+          uri: lb://SEARCHSERVICE
+
