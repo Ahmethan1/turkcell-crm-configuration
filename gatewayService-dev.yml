@@ -27,11 +27,9 @@ spring:
         routes[2]:
           id: accountService
           predicates[0]: Path=/accountservice/api/v1/accounts/**
-          filters[0]: SetPath=/
           uri: lb://ACCOUNTSERVICE
         routes[3]:
           id: searchService
-          predicates[0]: Path=/searchservice/api/v1/filter/**
-          filters[0]: SetPath=/
+          predicates[0]: Path=/searchservice/api/v1/filters/**
           uri: lb://SEARCHSERVICE
 
