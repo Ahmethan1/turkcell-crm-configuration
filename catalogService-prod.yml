@@ -9,13 +9,12 @@ eureka:
     preferIpAddress: true
 
 server:
-  port: 9011
-
+  port: 0
 spring:
   application:
-    name: accountService
+    name: productService
   datasource:
-    url: jdbc:postgresql://localhost:5432/CRMAccountServiceDB
+    url: jdbc:postgresql://localhost:5432/CRMProductServiceDB
     username: postgres
     password: 12345
   jpa:
