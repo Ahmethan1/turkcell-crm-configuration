@@ -13,9 +13,9 @@ server:
 
 spring:
   application:
-    name: productService
+    name: catalogService
   datasource:
-    url: jdbc:postgresql://localhost:5432/CRMProductServiceDB
+    url: jdbc:postgresql://localhost:5432/CRMCatalogServiceDB
     username: postgres
     password: 12345
   jpa:
