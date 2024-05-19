@@ -12,9 +12,9 @@ eureka:
 
 spring:
   application:
-    name: accountService
+    name: identityService
   datasource:
-    url: jdbc:postgresql://localhost:5432/CRMAccountServiceDB
+    url: jdbc:postgresql://localhost:5432/CRMIdentityServiceDB
     username: postgres
     password: 12345
   jpa:
