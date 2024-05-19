@@ -33,4 +33,4 @@ spring:
 jwt:
   secret:
     key: de6ef0886c5f568751a0cb7f6f560982b93c05c26b8897632fab03d2b36ca84e5f9ff73422cd0974ae43f3faafc59346baeb507df71110e9d53aa3af9643db39
-  expiration: 600000
+  expiration.time: 600000
