@@ -36,4 +36,9 @@ spring:
           id: catalogService
           predicates[0]: Path=/catalogservice/api/v1/catalogs/**
           uri: lb://CATALOGSERVICE
+        routes[5]:
+          id: identityService
+          predicates[0]: Path=/identityservice/api/v1/identity/**
+          uri: lb://IDENTITYSERVICE
+        
 
