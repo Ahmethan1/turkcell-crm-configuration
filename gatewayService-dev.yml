@@ -40,5 +40,9 @@ spring:
           id: identityService
           predicates[0]: Path=/identityservice/api/v1/identity/**
           uri: lb://IDENTITYSERVICE
+        routes[6]:
+          id: basketService
+          predicates[0]: Path=/basketservice/api/v1/baskets/**
+          uri: lb://BASKETSERVICE
         
 
