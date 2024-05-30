@@ -44,5 +44,10 @@ spring:
           id: basketService
           predicates[0]: Path=/basketservice/api/v1/baskets/**
           uri: lb://BASKETSERVICE
+        routes[7]:
+          id: salesService
+          predicates[0]: Path=/salesservice/api/v1/orders/**
+          uri: lb://SALESSERVICE
+        
         
 
