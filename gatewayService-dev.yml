@@ -38,7 +38,7 @@ spring:
           uri: lb://CATALOGSERVICE
         routes[5]:
           id: identityService
-          predicates[0]: Path=/identityservice/api/v1/identity/**
+          predicates[0]: Path=/identityservice/api/v1/identities/**
           uri: lb://IDENTITYSERVICE
         routes[6]:
           id: basketService
@@ -48,6 +48,10 @@ spring:
           id: salesService
           predicates[0]: Path=/salesservice/api/v1/orders/**
           uri: lb://SALESSERVICE
+        routes[8]:
+          id: invoiceService
+          predicates[0]: Path=/invoiceservice/api/v1/invoices/**
+          uri: lb://INVOICESERVICE
         
         
 
