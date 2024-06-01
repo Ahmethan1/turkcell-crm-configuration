@@ -15,7 +15,7 @@ spring:
   application:
     name: identityService
   datasource:
-    url: jdbc:postgresql://localhost:5432/CRMIdentityServiceDB
+    url: jdbc:postgresql://localhost:5454/CRMIdentityServiceDB
     username: postgres
     password: 12345
   jpa:

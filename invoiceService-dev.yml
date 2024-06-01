@@ -15,7 +15,7 @@ spring:
   application:
     name: invoiceService
   datasource:
-    url: jdbc:postgresql://localhost:5432/CRMinvoiceServiceDB
+    url: jdbc:postgresql://localhost:5453/CRMinvoiceServiceDB
     username: postgres
     password: 12345
   jpa:
