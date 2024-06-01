@@ -8,13 +8,13 @@ eureka:
     instance-id: ${spring.application.name}:${instanceId:${random.value}}
     preferIpAddress: true
 server:
-  port: 10046
+  port: 10035
 spring:
   application:
-    name: searchService
+    name: salesService
   data:
     mongodb:
-      database: searchServiceDb
+      database: salesServiceDb
       uri: mongodb://localhost:27017
   kafka:
     consumer:

@@ -9,13 +9,13 @@ eureka:
     preferIpAddress: true
 
 server:
-  port: 10040
+  port: 10045
 
 spring:
   application:
-    name: accountService
+    name: invoiceService
   datasource:
-    url: jdbc:postgresql://localhost:5432/CRMAccountServiceDB
+    url: jdbc:postgresql://localhost:5432/CRMinvoiceServiceDB
     username: postgres
     password: 12345
   jpa:
@@ -29,3 +29,8 @@ spring:
           validation:
             mode: none
     show-sql: true
+  kafka:
+    producer:
+      bootstrap-servers: localhost:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
