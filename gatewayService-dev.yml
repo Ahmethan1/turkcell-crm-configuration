@@ -26,7 +26,7 @@ spring:
           uri: http://localhost:9000
         routes[2]:
           id: accountService
-          predicates[0]: Path=/accountservice/api/v1/accounts/**
+          predicates[0]: Path=/accountservice/api/v1/**
           uri: lb://ACCOUNTSERVICE
         routes[3]:
           id: searchService

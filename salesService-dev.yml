@@ -15,7 +15,7 @@ spring:
   data:
     mongodb:
       database: salesServiceDb
-      uri: mongodb://localhost:27017
+      uri: mongodb://localhost:27021
   kafka:
     consumer:
       auto-offset-reset: earliest
