@@ -3,19 +3,19 @@ eureka:
     fetchRegistry: true
     registerWithEureka: true
     serviceUrl:
-      defaultZone: http://localhost:9000/eureka
+      defaultZone: http://discovery-server-prod:9000/eureka
   instance:
     instance-id: ${spring.application.name}:${instanceId:${random.value}}
     preferIpAddress: true
 
 server:
-  port: 0
+  port: 10045
 
 spring:
   application:
     name: invoiceService
   datasource:
-    url: jdbc:postgresql://localhost:5432/CRMinvoiceServiceDB
+    url: jdbc:postgresql://invoice-db-prod:5432/CRMinvoiceServiceDB
     username: postgres
     password: 12345
   jpa:

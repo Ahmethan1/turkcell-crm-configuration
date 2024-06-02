@@ -3,18 +3,19 @@ eureka:
     fetchRegistry: true
     registerWithEureka: true
     serviceUrl:
-      defaultZone: http://localhost:9000/eureka
+      defaultZone: http://discovery-server-prod:9000/eureka
   instance:
     instance-id: ${spring.application.name}:${instanceId:${random.value}}
     preferIpAddress: true
 
 server:
-  port: 0
+  port: 10042
+
 spring:
   application:
-    name: productService
+    name: catalogService
   datasource:
-    url: jdbc:postgresql://localhost:5432/CRMProductServiceDB
+    url: jdbc:postgresql://catalog-db-prod:5452/CRMCatalogServiceDB
     username: postgres
     password: 12345
   jpa:
@@ -28,3 +29,8 @@ spring:
           validation:
             mode: none
     show-sql: true
+  kafka:
+    producer:
+      bootstrap-servers: localhost:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer

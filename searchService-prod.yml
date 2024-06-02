@@ -3,19 +3,19 @@ eureka:
     fetchRegistry: true
     registerWithEureka: true
     serviceUrl:
-      defaultZone: http://localhost:9000/eureka
+      defaultZone: http://discovery-server-prod:9000/eureka
   instance:
     instance-id: ${spring.application.name}:${instanceId:${random.value}}
     preferIpAddress: true
 server:
-  port: 0
+  port: 10046
 spring:
   application:
     name: searchService
   data:
     mongodb:
       database: searchServiceDb
-      uri: mongodb://localhost:27017
+      uri: mongodb://search-db-prod:27017
   kafka:
     consumer:
       auto-offset-reset: earliest
